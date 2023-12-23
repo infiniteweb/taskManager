@@ -1,0 +1,38 @@
+$dark-purple: #635fc7;
+$light-purple: #a8a4ff;
+$black: #000112;
+$darkest-gray: #20212c;
+$dark-gray: #2b2c37;
+$medium-gray: #3e3f4e;
+$gray: #828fa3;
+$light-gray: #e4ebfa;
+$lightest-gray: #f4f7fd;
+$white: #fff;
+$red: #ea5555;
+$light-red: #ff9898;
+
+
+@media (min-width: 60em) {
+$font-size-xl: 24px;
+$line-height-xl: 30px;
+
+$font-size-l: 18px;
+$line-height-l: 23px;
+
+$font-size-m: 15px;
+$line-height-m: 19px;
+
+$font-size-s: 12px;
+$line-height-s: 15px;
+
+$font-size-body-l: 13px;
+$line-height-body-l: 23px;
+
+$font-size-body-m: 12px;
+$line-height-body-m: 15px;
+}
+
+
+ body{
+    background-color: blue;
+ }
