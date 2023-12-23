@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const baseUrl = 'http://localhost:8080/taskmanager/taskManagerBackEnd/'
+const baseUrl = "https://nathanjtye.com/taskManager/"
 
 export default function App() {
 
