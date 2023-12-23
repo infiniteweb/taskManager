@@ -11,42 +11,92 @@ $white: #fff;
 $red: #ea5555;
 $light-red: #ff9898;
 
-@mixin font($fontsize, $lineHeight){
-    font-size: $fontsize;
-    line-height: $lineHeight;
+@mixin font($fontsize, $lineHeight) {
+  font-size: $fontsize;
+  line-height: $lineHeight;
 }
 
-@media (min-width: 60em) {
-
 .fs-body-m {
-    @include font( 12px, 15px)
+  @include font(12px, 15px);
 }
 
 .fs-body-l {
-    @include font (13px, 23px)
+  @include font(13px, 23px);
 }
 
 .fs-s {
-    @include font (12px, 15px)
+  @include font(12px, 15px);
 }
 
-.fs-m{
-    @include font (15px, 19px)
-
+.fs-m {
+  @include font(15px, 19px);
 }
 
-.fs-l{
-    @include font (18px, 23px)
+.fs-l {
+  @include font(18px, 23px);
 }
 
-.fs-xl{
-    @include font (24px, 30px)
+.fs-xl {
+  @include font(24px, 30px);
 }
 
+@media (min-width: 60em) {
 }
 
+/* normalise */
 
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-body{
-    background-color: blue;
- }
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span {
+  margin: 0;
+ padding: 0;
+}
+
+/* set up the body */
+body {
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: white;
+}
