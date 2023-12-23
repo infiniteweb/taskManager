@@ -1,4 +1,20 @@
+import { useEffect, useState } from "react";
+
+const baseUrl = 'http://localhost:8080/taskmanager/taskManagerBackEnd/'
+
 export default function App() {
+
+  const [todos, setTodos] =useState([])
+
+  useEffect(()=>{
+    fetchToDos()
+  }, [])
+
+  const fetchToDos = async() => {
+    const todos = await fetch(baseUrl+'getall.php')
+    console.log(await todos.json())
+  }
+
   /* platform Launch fs-l  */
   return (
     <>
