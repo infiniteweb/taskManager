@@ -1,0 +1,102 @@
+:root {
+  --dark-purple: #635fc7;
+  --light-purple: #a8a4ff;
+  --black: #000112;
+  --darkest-gray: #20212c;
+  --dark-gray: #2b2c37;
+  --medium-gray: #3e3f4e;
+  --gray: #828fa3;
+  --light-gray: #e4ebfa;
+  --lightest-gray: #f4f7fd;
+  --white: #fff;
+  --red: #ea5555;
+  --light-red: #ff9898;
+}
+
+.fs-body-m {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.fs-body-l {
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.fs-s {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.fs-m {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.fs-l {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.fs-xl {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* normalise */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+/* set up the body */
+body {
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: white;
+}
