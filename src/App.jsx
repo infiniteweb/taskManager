@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
-import mobileLogo from "./assets/logo-mobile.svg"
+import mobileLogo from "./assets/logo-mobile.svg";
+import chevronDown from "./assets/icon-chevron-down.svg";
+import addTaskMobile from "./assets/icon-add-task-mobile.svg";
+import verticalEllipsis from "./assets/icon-vertical-ellipsis.svg";
 
-const baseUrl = "https://nathanjtye.com/taskManager/";
+const baseUrl = 'http://localhost:8080/taskmanager/taskManagerBackEnd/'
 
 export default function App() {
-  const [todos, setTodos] = useState([]);
+
+  const [todos, setTodos] =useState([])
 
   useEffect(() => {
     fetchToDos();
@@ -22,11 +26,11 @@ export default function App() {
         <div id="platform-launch">
           <img src={mobileLogo} alt="" className="logo" />
           <h2 className="fs-l">Platform Launch</h2>
-          <img src="./src/assets/icon-chevron-down.svg" alt="" />
+          <img src={chevronDown} alt="" />
           <button>
-            <img src="./src/assets/icon-add-task-mobile.svg" alt="" />
+            <img src={addTaskMobile} alt="" />
           </button>
-          <img src="./src/assets/vertical-ellipsis.svg" alt="" />
+          <img src={verticalEllipsis} alt="" />
         </div>
       </div>
       <div id="board">
