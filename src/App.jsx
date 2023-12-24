@@ -4,11 +4,10 @@ import chevronDown from "./assets/icon-chevron-down.svg";
 import addTaskMobile from "./assets/icon-add-task-mobile.svg";
 import verticalEllipsis from "./assets/icon-vertical-ellipsis.svg";
 
-const baseUrl = 'http://localhost:8080/taskmanager/taskManagerBackEnd/'
+const baseUrl = "https://nathanjtye.com/taskManager/";
 
 export default function App() {
-
-  const [todos, setTodos] =useState([])
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
     fetchToDos();
