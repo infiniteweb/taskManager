@@ -13,6 +13,8 @@
   --light-red: #ff9898;
 }
 
+/* font sizes */
+
 .fs-body-m {
   font-size: 12px;
   line-height: 15px;
@@ -99,4 +101,45 @@ select {
 
 body {
   background-color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "topbar"
+    "board";
+}
+
+#topbar {
+  grid-area: topbar;
+  display: flex;
+  align-items: center;
+  padding: 2.3vh 4.2vw;
+}
+
+#mobile-logo {
+  margin-right: 2.5vw;
+}
+
+#board-name {
+  margin-right: 2.5vw;
+}
+
+#chevron-down {
+  margin-right: 20vw;
+}
+
+#add-task-btn {
+  padding: 1.4vh 4.8vw;
+  margin-right: 4.2vw;
+  background-color: var(--dark-purple);
+  border-radius: 45%;
+  border: none;
+}
+
+#vertical-ellipsis {
+}
+
+#board {
+  grid-area: board;
 }
