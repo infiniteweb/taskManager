@@ -27,14 +27,12 @@ export default function LoginForm({ baseUrl }) {
   };
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-
-    const rememberMe = type === "checkbox" ? (checked ? 1 : 0) : value;
+    const { name, value } = e.target;
 
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
-      rememberMe: rememberMe,
+ 
     }));
   };
   return (
@@ -60,14 +58,6 @@ export default function LoginForm({ baseUrl }) {
             required
           />
           <label htmlFor="login-password">Password</label>
-        </div>
-        <div>
-          <label>Remember Me</label>
-          <input
-            type="checkbox"
-            value={formData.rememberMe}
-            onChange={handleChange}
-          />
         </div>
         <div id="error-message">
           <span>Invalid email or password</span>
