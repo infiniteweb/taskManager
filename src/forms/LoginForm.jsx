@@ -4,7 +4,6 @@ export default function LoginForm({ baseUrl }) {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    rememberMe: 0
   });
 
   const handleSubmit = async (e) => {
@@ -16,6 +15,7 @@ export default function LoginForm({ baseUrl }) {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify(formData),
       });
       if (response.ok) {
@@ -27,10 +27,14 @@ export default function LoginForm({ baseUrl }) {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
+
+    // const rememberMe = type === "checkbox" ? (checked ? 1 : 0) : value;
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
+      rememberMe: checked,
     }));
   };
   return (
@@ -59,7 +63,11 @@ export default function LoginForm({ baseUrl }) {
         </div>
         <div>
           <label>Remember Me</label>
-          <input type="checkbox" value="1" id="remember-me" />
+          <input
+            type="checkbox"
+            value={formData.rememberMe}
+            onChange={handleChange}
+          />
         </div>
         <div id="error-message">
           <span>Invalid email or password</span>
