@@ -3,13 +3,11 @@ import mobileLogo from "../assets/logo-mobile.svg";
 import chevronDown from "../assets/icon-chevron-down.svg";
 import addTaskMobile from "../assets/icon-add-task-mobile.svg";
 import verticalEllipsis from "../assets/icon-vertical-ellipsis.svg";
-const baseUrl = "http://localhost:8080/taskmanager/taskManagerBackEnd/";
+const baseUrl = "https://nathantyetaskmanager.online/php/";
 
-export default function MainPage(){
-
-    console.log;
+export default function MainPage() {
+  console.log;
   const [todos, setTodos] = useState([]);
-
 
   useEffect(() => {
     fetchToDos();
@@ -20,20 +18,20 @@ export default function MainPage(){
     console.log(await todos.json());
   };
 
-
-
   /* platform Launch fs-l  */
   return (
     <>
       <div className="container">
         <div id="topbar">
           <img src={mobileLogo} alt="" id="mobile-logo" />
-          <h2 className="fs-l" id="board-name" >Platform Launch</h2>
-          <img src={chevronDown} alt="" id="chevron-down"/>
+          <h2 className="fs-l" id="board-name">
+            Platform Launch
+          </h2>
+          <img src={chevronDown} alt="" id="chevron-down" />
           <button id="add-task-btn">
             <img src={addTaskMobile} alt="" />
           </button>
-          <img src={verticalEllipsis} alt=""id="vertical-ellipsis"/>
+          <img src={verticalEllipsis} alt="" id="vertical-ellipsis" />
         </div>
 
         <div id="board">
@@ -94,5 +92,5 @@ export default function MainPage(){
         </div>
       </div>
     </>
-  )
+  );
 }
