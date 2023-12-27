@@ -3,7 +3,7 @@ import MainPage from "./pages/MainPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
-  const baseUrl = "https://nathanjtye.com/taskManager/"
+  const baseUrl = "https://nathantyetaskmanager.online/php/"
   return (
     <>
       <BrowserRouter>
