@@ -26,10 +26,17 @@ export default function LoginForm({ baseUrl }) {
     }
   };
 
+  const logout = async () => {
+    await fetch(baseUrl + "logout.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
-
-   
 
     setFormData((prevData) => ({
       ...prevData,
@@ -78,6 +85,7 @@ export default function LoginForm({ baseUrl }) {
         </div>
         <button type="submit">Submit</button>
       </form>
+      <button onClick={logout}>Logout</button>
     </>
   );
 }

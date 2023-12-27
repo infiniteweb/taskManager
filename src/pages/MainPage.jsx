@@ -14,7 +14,7 @@ export default function MainPage() {
   }, []);
 
   const fetchToDos = async () => {
-    const todos = await fetch(baseUrl + "getall.php");
+    const todos = await fetch(baseUrl + "getAll.php");
     console.log(await todos.json());
   };
 
